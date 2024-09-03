@@ -1,9 +1,10 @@
 import { Image, StyleSheet, Platform } from 'react-native';
-
 import { HelloWave } from '@/components/HelloWave';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Stack } from 'expo-router';
+import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 
 export default function HomeScreen() {
   return (
@@ -15,6 +16,13 @@ export default function HomeScreen() {
           style={styles.reactLogo}
         />
       }>
+        <Stack.Screen options={{
+            headerShown: true,
+            title: 'Home',
+            headerLeft: () => (
+              <TabBarIcon name={`menu`} color={`#fff`} />
+            )
+        }}/>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />

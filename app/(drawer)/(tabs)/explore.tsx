@@ -6,12 +6,21 @@ import { ExternalLink } from '@/components/ExternalLink';
 import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import { Stack } from 'expo-router';
+import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 
-export default function TabTwoScreen() {
+export default function ExploreScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#D0D0D0', dark: '#353636' }}
       headerImage={<Ionicons size={310} name="code-slash" style={styles.headerImage} />}>
+        <Stack.Screen options={{
+          headerShown: true,
+          title: 'Explore',
+          headerLeft: () => (
+            <TabBarIcon name={`menu`} color={`#fff`} />
+          )
+        }} />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>
       </ThemedView>
