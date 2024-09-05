@@ -7,7 +7,6 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Stack } from 'expo-router';
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 
 export default function ExploreScreen() {
   return (
@@ -17,9 +16,6 @@ export default function ExploreScreen() {
         <Stack.Screen options={{
           headerShown: true,
           title: 'Explore',
-          headerLeft: () => (
-            <TabBarIcon name={`menu`} color={`#fff`} />
-          )
         }} />
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Explore</ThemedText>

@@ -4,7 +4,6 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Stack } from 'expo-router';
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 
 export default function HomeScreen() {
   return (
@@ -18,10 +17,7 @@ export default function HomeScreen() {
       }>
         <Stack.Screen options={{
             headerShown: true,
-            title: 'Home',
-            headerLeft: () => (
-              <TabBarIcon name={`menu`} color={`#fff`} />
-            )
+            title: 'Home'
         }}/>
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>

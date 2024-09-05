@@ -3,9 +3,8 @@ import ParallaxScrollView from '@/components/ParallaxScrollView';
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
 import { Stack } from 'expo-router';
-import { TabBarIcon } from '@/components/navigation/TabBarIcon';
 
-export default function SettingsScreen() {
+export default function ChatsScreen() {
   return (
     <ParallaxScrollView
       headerBackgroundColor={{ light: '#A1CEDC', dark: '#1D3D47' }}
@@ -17,14 +16,16 @@ export default function SettingsScreen() {
     }>
       <Stack.Screen options={{
         headerShown: true,
-        title: 'Settings',
-        headerLeft: () => (
-          <TabBarIcon name={`menu`} color={`#fff`} />
-        )
+        title: 'Notifications',
       }} />
       <ThemedView style={styles.titleContainer}>
-        <ThemedText type="title">Settings</ThemedText>
-      </ThemedView> 
+        <ThemedText type="title">Welcome to my Chats!</ThemedText>
+      </ThemedView>
+      <ThemedView style={styles.stepContainer}>
+        <ThemedText type="subtitle">Learn everything I do on a daily-basis</ThemedText>
+      </ThemedView>
+     
+      
     </ParallaxScrollView>
   );
 }

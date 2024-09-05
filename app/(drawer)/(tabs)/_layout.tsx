@@ -24,15 +24,6 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="settings"
-        options={{
-          title: 'Settings',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'home' : 'home-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="explore"
         options={{
           title: 'Explore',
@@ -41,43 +32,7 @@ export default function TabsLayout() {
           ),
         }}
       />
-      <Tabs.Screen
-        name="auth/login"
-        options={{
-          title: 'Login',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="auth/register"
-        options={{
-          title: 'Register',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
-        name="blog"
-        options={{
-          title: 'Blog',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
       {/* <Tabs.Screen
-        name="feed/discover"
-        options={{
-          title: 'Discover',
-          tabBarIcon: ({ color, focused }) => (
-            <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="search/index"
         options={{
           title: 'Search',
@@ -86,17 +41,18 @@ export default function TabsLayout() {
           ),
         }}
       />
+      */}
       <Tabs.Screen
-        name="chat/index"
+        name="chats"
         options={{
-          title: 'Chat',
+          title: 'Chats',
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon name={focused ? 'code-slash' : 'code-slash-outline'} color={color} />
           ),
         }}
       />
       <Tabs.Screen
-        name="notifications/index"
+        name="notifications"
         options={{
           title: 'Notifications',
           tabBarIcon: ({ color, focused }) => (
@@ -104,7 +60,8 @@ export default function TabsLayout() {
           ),
         }}
       />
-      <Tabs.Screen
+      
+      {/* <Tabs.Screen
         name="users/[id]"
         options={{
           title: 'Profile',
